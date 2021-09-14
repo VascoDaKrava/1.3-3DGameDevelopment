@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - PlayerHead
+  - WeaponPositionTag
+  - GlobalScript
+  - Weapon
+  - BulletStart1
+  - UI_health
+  - UI_bullets
+  - UI
+  - AudioSource
+  - ParticleSystem
   layers:
   - Default
   - TransparentFX

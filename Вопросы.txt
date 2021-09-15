@@ -1,0 +1,7 @@
+1. При запекании света, Unity не захотело использовать GPU. Можно как-то принудить или нужна соременная сильная видеокарта (в моей 1Гб gddr5)?
+Ошибка:
+OpenCL GPU device GeForce GTX 550 Ti from NVIDIA Corporation has less than 4 GB of global memory, ignoring device for lightmapping.
+
+2. Не разобрался как применить туман из ассета Ultra Skybox Fog https://assetstore.unity.com/packages/vfx/shaders/ultra-skybox-fog-115414
+В принципе не очень понятно как его применять. Он или работает или нет?
+В паке есть шейдер и два материала с развёртками куба для них. Куда это применить для тумана? Или это настройки только для неба?

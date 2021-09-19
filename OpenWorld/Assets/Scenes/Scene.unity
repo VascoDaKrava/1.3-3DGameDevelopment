@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 5255cfd29eb8853488d8d5abb3d61e66, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 62f7bc4ca1985924cb3115e09323e26b, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: fc18e8c765e1a6c4ebfda3b033eac83e, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -228,7 +228,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 4.543584e+30, y: NaN, z: 1.8058449e+28, w: 1.8512098e+28}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -325,7 +325,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.23911765, y: 0.3696438, z: -0.09904577, w: 0.89239913}
-  m_LocalPosition: {x: 0, y: 50, z: -30}
+  m_LocalPosition: {x: 40, y: 50, z: 40}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -489,7 +489,7 @@ WindZone:
   m_Enabled: 1
   m_Mode: 0
   m_Radius: 20
-  m_WindMain: 50
+  m_WindMain: 2
   m_WindTurbulence: 2
   m_WindPulseMagnitude: 1
   m_WindPulseFrequency: 1
@@ -547,8 +547,8 @@ Terrain:
   serializedVersion: 6
   m_TerrainData: {fileID: 15600000, guid: ad2781cb969306344870749b555342bd, type: 2}
   m_TreeDistance: 5000
-  m_TreeBillboardDistance: 50
-  m_TreeCrossFadeLength: 5
+  m_TreeBillboardDistance: 200
+  m_TreeCrossFadeLength: 200
   m_TreeMaximumFullLODCount: 500
   m_DetailObjectDistance: 80
   m_DetailObjectDensity: 1
@@ -566,7 +566,7 @@ Terrain:
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
   m_ScaleInLightmap: 0.0256
-  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+  m_LightmapParameters: {fileID: 15204, guid: 0000000000000000f000000000000000, type: 0}
   m_GroupingID: 0
   m_RenderingLayerMask: 1
   m_AllowAutoConnect: 1

@@ -15,11 +15,11 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.58508366, g: 0.7169812, b: 0.66406757, a: 1}
+  m_FogColor: {r: 0.60875756, g: 0.7519159, b: 0.754717, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.02
   m_LinearFogStart: 0
-  m_LinearFogEnd: 100
+  m_LinearFogEnd: 200
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
@@ -421,7 +421,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &950537696
 GameObject:
@@ -826,9 +826,9 @@ WindZone:
   m_Mode: 0
   m_Radius: 20
   m_WindMain: 2
-  m_WindTurbulence: 2
-  m_WindPulseMagnitude: 1
-  m_WindPulseFrequency: 1
+  m_WindTurbulence: 0.1
+  m_WindPulseMagnitude: 2
+  m_WindPulseFrequency: 0.25
 --- !u!4 &1644244311
 Transform:
   m_ObjectHideFlags: 0
@@ -1042,7 +1042,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 111438402233660389, guid: 706a627eb6e71b94e807bb2f303d9b50, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 111438402233660389, guid: 706a627eb6e71b94e807bb2f303d9b50, type: 3}
       propertyPath: m_LocalPosition.x

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    [SerializeField] private ScriptablePlace asd;
+
     [SerializeField] private int _health;
 
     private int _bananaQuantity = 0;

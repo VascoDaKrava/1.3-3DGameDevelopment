@@ -48,6 +48,7 @@ public class Storage : MonoBehaviour
     private static string _UI = "UI";// 07
     private static string _audioSource = "AudioSource";// 08
     private static string _particleSystem = "ParticleSystem";// 09
+    private static string _flashlight = "Flashlight";// 10
 
     public static string GlobalTag { get { return _globalTag; } }
     public static string WeaponPositionTag { get { return _weaponPosTag; } }
@@ -59,6 +60,7 @@ public class Storage : MonoBehaviour
     public static string UITag { get { return _UI; } }
     public static string AudioSourceTag { get { return _audioSource; } }
     public static string ParticleSystemTag { get { return _particleSystem; } }
+    public static string FlashlightTag { get { return _flashlight; } }
 
     private static string _untagged = "Untagged";
     private static string _mainCamera = "MainCamera";

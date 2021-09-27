@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    [SerializeField] private ScriptablePlace asd;
+    [SerializeField] private EventsSO _eventSO;
 
     [SerializeField] private int _health;
 
@@ -13,6 +13,11 @@ public class PlayerScript : MonoBehaviour
     public int Health { get { return _health; } }
 
     public int Bananas { get { return _bananaQuantity; } }
+
+    private void Start()
+    {
+        _eventSO.SubscribePickupEvent();
+    }
 
     /// <summary>
     /// Change Health

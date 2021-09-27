@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -16,7 +17,9 @@ public class PlayerScript : MonoBehaviour
 
     private void Start()
     {
-        _eventSO.SubscribePickupEvent();
+        _eventSO.PickupBananaEvent.AddListener(GetBanana);
+        _eventSO.PickupMashroomEvent.AddListener(ChangeHealth);
+        _eventSO.PickupAIDEvent.AddListener(ChangeHealth);
     }
 
     /// <summary>
@@ -30,6 +33,11 @@ public class PlayerScript : MonoBehaviour
         if (_health > 100) _health = 100;
 
         if (_health <= 0) Die();
+    }
+
+    private void GetBanana(int quantity)
+    {
+        _bananaQuantity += quantity;
     }
 
     private void Die()

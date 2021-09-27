@@ -3,26 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[System.Serializable]
 public class PickupEvent : UnityEvent<int> { }
 
-[CreateAssetMenu][System.Serializable]
+[CreateAssetMenu]
 public class EventsSO : ScriptableObject
 {
-    public PickupEvent _pickupEvent;
+    public PickupEvent PickupBananaEvent;
+    public PickupEvent PickupMashroomEvent;
+    public PickupEvent PickupAIDEvent;
 
-    public void InvokeBananaCatch(int asd)
+    public void InvokeBananaCatch(int quantity)
     {
-        _pickupEvent.Invoke(1);
-        Debug.Log("Check!");
+        PickupBananaEvent.Invoke(quantity);
     }
 
-    public void SubscribePickupEvent()
+    public void InvokeMashroomCatch(int damage)
     {
-        _pickupEvent.AddListener(Boom);
+        PickupMashroomEvent.Invoke(damage);
     }
 
-    public void Boom(int asd)
+    public void InvokeAIDCatch(int power)
     {
-        _pickupEvent.Invoke(1);
+        PickupMashroomEvent.Invoke(power);
     }
 }

@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class PlayerMoving : MonoBehaviour
 {
+    private Light _flashlight;
+    private Animator _animator;
+
     private Vector3 _inputMoveDirection;
     private Vector3 _inputMouseDirection;
     private Vector3 _grounCheckBoxHalfSize;
     private Rigidbody _playerRigidbody;
     private Transform _playerTransform;
     private Transform _headTransform;
-    private Light _flashlight;
     private float _yRot;
     private float _speedWalk = 2f;
     private float _speedRun = 5f;
@@ -32,9 +34,10 @@ public class PlayerMoving : MonoBehaviour
         _inputMouseDirection = _headTransform.eulerAngles;
         _flashlight = Storage.FindTransformInChildrenWithTag(gameObject, Storage.FlashlightTag).GetComponent<Light>();
         _flashlight.enabled = false;
+        _animator = GetComponentInChildren<Animator>();
+        
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         GetInput();
@@ -53,9 +56,13 @@ public class PlayerMoving : MonoBehaviour
     /// </summary>
     private void GetInput()
     {
-        _inputMoveDirection.x = Input.GetAxis("Horizontal");
+         _inputMoveDirection.x = Input.GetAxis("Horizontal");
+        _animator.SetFloat("X", _inputMoveDirection.x);
+        
         _inputMoveDirection.y = 0f;
+
         _inputMoveDirection.z = Input.GetAxis("Vertical");
+        _animator.SetFloat("Z", _inputMoveDirection.z);
 
         _yRot = Input.GetAxisRaw("Mouse X");
 
@@ -63,6 +70,7 @@ public class PlayerMoving : MonoBehaviour
         _inputMouseDirection.y -= Input.GetAxis("Mouse Y");
 
         _isSpeedUp = Input.GetButton("SpeedUp");
+        _animator.SetBool("isRun", _isSpeedUp);
 
         _isJump = Input.GetButton("Jump");
 
@@ -108,6 +116,7 @@ public class PlayerMoving : MonoBehaviour
 
         //_playerRigidbody.AddForce(Vector3.up * _playerRigidbody.mass * _jumpImpulseScale, ForceMode.Impulse);
         Storage.ToLog(this, Storage.GetCallerName(), "Now Jump!");
+        _animator.SetTrigger("DoJump");
     }
 
     private void Flashlight()

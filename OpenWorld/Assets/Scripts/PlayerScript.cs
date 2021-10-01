@@ -1,13 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class PlayerScript : MonoBehaviour
 {
     [SerializeField] private EventsSO _eventSO;
 
-    [SerializeField] private int _health;
+    [SerializeField] private int _health = 100;
+
+    private Animator _animator;
 
     private int _bananaQuantity = 0;
 
@@ -20,6 +19,7 @@ public class PlayerScript : MonoBehaviour
         _eventSO.PickupBananaEvent.AddListener(GetBanana);
         _eventSO.PickupMashroomEvent.AddListener(ChangeHealth);
         _eventSO.PickupAIDEvent.AddListener(ChangeHealth);
+        _animator = GetComponentInChildren<Animator>();
     }
 
     /// <summary>
@@ -28,15 +28,16 @@ public class PlayerScript : MonoBehaviour
     /// <param name="newHealth"></param>
     public void ChangeHealth(int newHealth)
     {
+        _animator.SetTrigger("DoLifting");
         _health += newHealth;
 
         if (_health > 100) _health = 100;
-
         if (_health <= 0) Die();
     }
 
     private void GetBanana(int quantity)
     {
+        _animator.SetTrigger("DoLifting");
         _bananaQuantity += quantity;
     }
 

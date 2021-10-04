@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraScript : MonoBehaviour
@@ -12,15 +10,12 @@ public class CameraScript : MonoBehaviour
     private float _distanceToChangeSens = 1f;
     private float _cameraRotationSens;
 
-    // Start is called before the first frame update
     void Start()
     {
         _cameraTransform = GameObject.FindGameObjectWithTag(Storage.MainCameraTag).transform;
         _playerHeadTransform = GameObject.FindGameObjectWithTag(Storage.PlayerHeadTag).transform;
     }
 
-    // Update is called once per frame
-    //void LateUpdate()
     private void FixedUpdate()
     {
         if (Vector3.Distance(_cameraTransform.position, _playerHeadTransform.position) > _distanceToChangeSens)

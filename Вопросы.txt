@@ -1,3 +1,1 @@
-1. Для некоторых деревьев Unity выдаёт ошибку:
-The tree Coconut_Palm_Tree12_AFS must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
-Что это и как чинить? Нужен шейдер из ассета?
+1. 

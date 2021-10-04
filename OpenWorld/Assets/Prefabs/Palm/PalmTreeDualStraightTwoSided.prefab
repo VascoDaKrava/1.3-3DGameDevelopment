@@ -173,7 +173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 431444}
-  - component: {fileID: 6431444}
+  - component: {fileID: 7712598933509266802}
   - component: {fileID: -2251613705374310118}
   m_Layer: 0
   m_Name: PalmTreeDualStraightTwoSided
@@ -198,8 +198,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &6431444
-MeshCollider:
+--- !u!65 &7712598933509266802
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -208,10 +208,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 6a19eafc9d24ca04fb2d532742cc211d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 4, z: 1}
+  m_Center: {x: -0.25, y: 2, z: 0}
 --- !u!205 &-2251613705374310118
 LODGroup:
   m_ObjectHideFlags: 0

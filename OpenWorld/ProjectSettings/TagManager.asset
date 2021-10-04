@@ -14,6 +14,7 @@ TagManager:
   - UI
   - AudioSource
   - ParticleSystem
+  - Flashlight
   layers:
   - Default
   - TransparentFX

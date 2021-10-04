@@ -10,6 +10,7 @@ public class PlayerMoving : MonoBehaviour
     private Rigidbody _playerRigidbody;
     private Transform _playerTransform;
     private Transform _headTransform;
+    private Light _flashlight;
     private float _yRot;
     private float _speedWalk = 2f;
     private float _speedRun = 5f;
@@ -19,6 +20,7 @@ public class PlayerMoving : MonoBehaviour
     private int _jumpCheckLayerMask = 1 << 0;// Layer 0 - Default
     private bool _isSpeedUp;
     private bool _isJump;
+    private bool _flashlightOn;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,8 @@ public class PlayerMoving : MonoBehaviour
         _playerTransform = GetComponent<Transform>();
         _headTransform = Storage.FindTransformInChildrenWithTag(gameObject, Storage.PlayerHeadTag);
         _inputMouseDirection = _headTransform.eulerAngles;
+        _flashlight = Storage.FindTransformInChildrenWithTag(gameObject, Storage.FlashlightTag).GetComponent<Light>();
+        _flashlight.enabled = false;
     }
 
     // Update is called once per frame
@@ -37,6 +41,11 @@ public class PlayerMoving : MonoBehaviour
         HeadRotate();
         PlayerMove();
         PlayerJump();
+    }
+
+    private void Update()
+    {
+        Flashlight();
     }
 
     /// <summary>
@@ -56,6 +65,8 @@ public class PlayerMoving : MonoBehaviour
         _isSpeedUp = Input.GetButton("SpeedUp");
 
         _isJump = Input.GetButton("Jump");
+
+        _flashlightOn = Input.GetButtonDown("Flashlight");
     }
 
     /// <summary>
@@ -97,5 +108,11 @@ public class PlayerMoving : MonoBehaviour
 
         //_playerRigidbody.AddForce(Vector3.up * _playerRigidbody.mass * _jumpImpulseScale, ForceMode.Impulse);
         Storage.ToLog(this, Storage.GetCallerName(), "Now Jump!");
+    }
+
+    private void Flashlight()
+    {
+        if (_flashlightOn)
+            _flashlight.enabled = !_flashlight.enabled;
     }
 }

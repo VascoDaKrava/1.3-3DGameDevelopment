@@ -12,7 +12,7 @@ public class GUI_script : MonoBehaviour
     private Rect _labelRect = new Rect(25, 25, 100, 25);
     private Rect _sliderRect = new Rect(25, 50, 100, 25);
     private Rect _bananaIcoRect = new Rect(25, 75, 25, 25);
-    private Rect _bananaTextRect = new Rect(80, 75, 25, 25);
+    private Rect _bananaTextRect = new Rect(75, 75, 50, 25);
 
     private float _healthMin = 0f;
     private float _healthMax = 100f;
@@ -32,6 +32,6 @@ public class GUI_script : MonoBehaviour
 
         GUI.DrawTexture(_bananaIcoRect, _banana);
 
-        GUI.Label(_bananaTextRect, _player.Bananas.ToString());
+        GUI.Label(_bananaTextRect, $"{_player.Bananas:d2} / 25");
     }
 }

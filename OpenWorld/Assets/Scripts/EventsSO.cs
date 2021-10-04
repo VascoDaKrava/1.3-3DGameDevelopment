@@ -6,12 +6,18 @@ using UnityEngine.Events;
 [System.Serializable]
 public class PickupEvent : UnityEvent<int> { }
 
+[System.Serializable]
+public class PickupFind : UnityEvent<Transform> { }
+
 [CreateAssetMenu]
 public class EventsSO : ScriptableObject
 {
     public PickupEvent PickupBananaEvent;
     public PickupEvent PickupMashroomEvent;
     public PickupEvent PickupAIDEvent;
+    
+    public PickupFind PickupFind;
+    public PickupFind PickupLost;
 
     public void InvokeBananaCatch(int quantity)
     {
@@ -25,6 +31,16 @@ public class EventsSO : ScriptableObject
 
     public void InvokeAIDCatch(int power)
     {
-        PickupMashroomEvent.Invoke(power);
+        PickupAIDEvent.Invoke(power);
+    }
+
+    public void InvokePickupFind(Transform trans)
+    {
+        PickupFind.Invoke(trans);
+    }
+    
+    public void InvokePickupLost(Transform trans)
+    {
+        PickupLost.Invoke(trans);
     }
 }

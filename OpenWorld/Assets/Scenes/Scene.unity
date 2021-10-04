@@ -1243,6 +1243,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2057144891359761647, guid: dceb8e8a021777a4aa3fff4bac4eeecb, type: 3}
+      propertyPath: ikActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2057144891359761647, guid: dceb8e8a021777a4aa3fff4bac4eeecb, type: 3}
+      propertyPath: rightHandObj
+      value: 
+      objectReference: {fileID: 1493998033}
+    - target: {fileID: 5939929686557257591, guid: dceb8e8a021777a4aa3fff4bac4eeecb, type: 3}
+      propertyPath: ikActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939929686557257591, guid: dceb8e8a021777a4aa3fff4bac4eeecb, type: 3}
+      propertyPath: rightHandObj
+      value: 
+      objectReference: {fileID: 1493998033}
+    - target: {fileID: 9128365801082919728, guid: dceb8e8a021777a4aa3fff4bac4eeecb, type: 3}
+      propertyPath: lookObj
+      value: 
+      objectReference: {fileID: 1493998033}
+    - target: {fileID: 9128365801082919728, guid: dceb8e8a021777a4aa3fff4bac4eeecb, type: 3}
+      propertyPath: ikActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128365801082919728, guid: dceb8e8a021777a4aa3fff4bac4eeecb, type: 3}
+      propertyPath: rightHandObj
+      value: 
+      objectReference: {fileID: 1493998033}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dceb8e8a021777a4aa3fff4bac4eeecb, type: 3}
 --- !u!1001 &388724397

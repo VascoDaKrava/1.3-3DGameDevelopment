@@ -22,7 +22,7 @@ public class PlayerMoving : MonoBehaviour
     private int _jumpCheckLayerMask = 1 << 0;// Layer 0 - Default
     private bool _isSpeedUp;
     private bool _isJump;
-    private bool _flashlightOn;
+    private bool _switchFlashPressed;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +35,6 @@ public class PlayerMoving : MonoBehaviour
         _flashlight = Storage.FindTransformInChildrenWithTag(gameObject, Storage.FlashlightTag).GetComponent<Light>();
         _flashlight.enabled = false;
         _animator = GetComponentInChildren<Animator>();
-        
     }
 
     void FixedUpdate()
@@ -56,9 +55,9 @@ public class PlayerMoving : MonoBehaviour
     /// </summary>
     private void GetInput()
     {
-         _inputMoveDirection.x = Input.GetAxis("Horizontal");
+        _inputMoveDirection.x = Input.GetAxis("Horizontal");
         _animator.SetFloat("X", _inputMoveDirection.x);
-        
+
         _inputMoveDirection.y = 0f;
 
         _inputMoveDirection.z = Input.GetAxis("Vertical");
@@ -74,7 +73,7 @@ public class PlayerMoving : MonoBehaviour
 
         _isJump = Input.GetButton("Jump");
 
-        _flashlightOn = Input.GetButtonDown("Flashlight");
+        _switchFlashPressed = Input.GetButtonDown("Flashlight");
     }
 
     /// <summary>
@@ -121,7 +120,7 @@ public class PlayerMoving : MonoBehaviour
 
     private void Flashlight()
     {
-        if (_flashlightOn)
+        if (_switchFlashPressed)
             _flashlight.enabled = !_flashlight.enabled;
     }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3811488774958107886}
   - component: {fileID: 4053779943593865022}
   - component: {fileID: 8834421548642179404}
+  - component: {fileID: 3205214063534469412}
   m_Layer: 0
   m_Name: AID
   m_TagString: Untagged
@@ -59,6 +60,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _events: {fileID: 11400000, guid: 38e2ef59f61e57e47b0a32c6a2b1cc0b, type: 2}
+--- !u!135 &3205214063534469412
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888003177407740902}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &8128824319043465588
 PrefabInstance:
   m_ObjectHideFlags: 0

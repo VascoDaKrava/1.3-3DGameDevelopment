@@ -9,6 +9,7 @@ Vignette
 7.3 Фокусировка глаза Depth of Field должна приходиться на объект, на который смотрит игрок.
 
 Доделано:
+Добавлен вход в пещеру, закрывающий Terrain/Hole.
 
 Исправлено:
 Перезапёк свет с установками Lightmap size 4096 pixel и Lightmap resolution 512 texel per unit. Ошибки UV-overlap не появляются.

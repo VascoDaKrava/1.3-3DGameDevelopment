@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 4053779943593865022}
   - component: {fileID: 8834421548642179404}
   - component: {fileID: 3205214063534469412}
-  m_Layer: 0
+  - component: {fileID: 7324994120253979373}
+  m_Layer: 6
   m_Name: AID
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,6 +74,23 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7324994120253979373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888003177407740902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 94c35715c907c6c4eb8ab7a748048288, type: 2}
+  isGlobal: 0
+  blendDistance: 5
+  weight: 1
+  priority: 0
 --- !u!1001 &8128824319043465588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -143,6 +161,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 24944f92b89a8214085fe21e2769e72e, type: 3}
       propertyPath: m_Name
       value: MushroomGood
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 24944f92b89a8214085fe21e2769e72e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24944f92b89a8214085fe21e2769e72e, type: 3}

@@ -105,6 +105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2478244779349219896}
+  - component: {fileID: 669213443620924861}
   m_Layer: 0
   m_Name: MetalCrate1
   m_TagString: Untagged
@@ -127,3 +128,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!205 &669213443620924861
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6838716386436711415}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.0036933422, y: 0.5907348, z: 0.0014967024}
+  m_Size: 1.0991865
+  m_FadeMode: 1
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.038
+    fadeTransitionWidth: 0.5
+    renderers:
+    - renderer: {fileID: 1328847902424690045}
+  m_Enabled: 1

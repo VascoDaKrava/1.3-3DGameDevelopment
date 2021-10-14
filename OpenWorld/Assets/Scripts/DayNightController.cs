@@ -29,6 +29,7 @@ public class DayNightController : MonoBehaviour
         _light.color = _sunrise;
         _light.intensity = _minIntensity;
         _sunRotation = _sunStartRotation;
+        RenderSettings.skybox.SetFloat("_AtmosphereThickness", 1f);
     }
 
     // Update is called once per frame
